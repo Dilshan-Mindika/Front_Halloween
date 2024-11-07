@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Student } from './types';
 
-const API_URL = 'http://localhost:4040/student';
+const API_URL = "http://54.227.140.20:4040/student";
 
 export const api = {
   getAllStudents: () => axios.get<Student[]>(`${API_URL}/all`),

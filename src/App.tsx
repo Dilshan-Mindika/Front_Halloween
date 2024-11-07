@@ -53,7 +53,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100">
+    <div className="min-h-screen text-gray-100 bg-gray-900">
       <Toaster 
         position="top-right"
         toastOptions={{
@@ -65,10 +65,10 @@ function App() {
       />
       
       <nav className="bg-gray-800 shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <Ticket className="h-8 w-8 text-purple-400" />
+              <Ticket className="w-8 h-8 text-purple-400" />
               <span className="ml-2 text-xl font-semibold text-gray-100">
                 Halloween Party Tickets
               </span>
@@ -79,7 +79,7 @@ function App() {
                 href="https://github.com/Dilshan-Mindika" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="ml-1 text-purple-400 hover:text-purple-300 transition-colors"
+                className="ml-1 text-purple-400 transition-colors hover:text-purple-300"
               >
                 DILA
               </a>
@@ -88,11 +88,11 @@ function App() {
         </div>
       </nav>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {showForm ? (
           <div className="max-w-md mx-auto">
-            <div className="bg-gray-800 rounded-lg shadow-xl p-6">
-              <h2 className="text-lg font-semibold text-gray-100 mb-4">Generate QR Code Ticket</h2>
+            <div className="p-6 bg-gray-800 rounded-lg shadow-xl">
+              <h2 className="mb-4 text-lg font-semibold text-gray-100">Mortem  Night | Halloween Party Registration</h2>
               <StudentForm onSubmit={handleSubmit} loading={formLoading} />
             </div>
           </div>
@@ -101,17 +101,17 @@ function App() {
             <div className="mb-6">
               <button
                 onClick={() => setShowForm(true)}
-                className="flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                className="flex items-center text-purple-400 transition-colors hover:text-purple-300"
               >
-                <ArrowLeft className="h-5 w-5 mr-1" />
+                <ArrowLeft className="w-5 h-5 mr-1" />
                 Back to Generate Ticket
               </button>
             </div>
-            <div className="bg-gray-800 rounded-lg shadow-xl p-6">
+            <div className="p-6 bg-gray-800 rounded-lg shadow-xl">
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center">
-                  <Users className="h-6 w-6 text-purple-400" />
-                  <h2 className="text-lg font-semibold text-gray-100 ml-2">Student List</h2>
+                  <Users className="w-6 h-6 text-purple-400" />
+                  <h2 className="ml-2 text-lg font-semibold text-gray-100">Student List</h2>
                 </div>
                 <span className="text-gray-400">
                   {students.length} students registered
@@ -127,8 +127,8 @@ function App() {
         )}
       </main>
 
-      <footer className="bg-gray-800 py-4 mt-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <footer className="py-4 mt-8 bg-gray-800">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <p className="text-center text-gray-400">
             © 2024 Halloween Party | All Rights Reserved by CSE
           </p>
